@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Git Incident Response Showcase</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #132238;
+      --muted: #4f6278;
+      --accent: #0b6bcb;
+      --ok: #0f8a5f;
+    }
+    body {
+      margin: 0;
+      font-family: "Georgia", "Times New Roman", serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 60%);
+    }
+    main {
+      max-width: 860px;
+      margin: 48px auto;
+      padding: 0 20px 40px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+    }
+    .subtitle {
+      margin: 0 0 24px;
+      color: var(--muted);
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid #dbe6f4;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 28px rgba(7, 42, 78, 0.08);
+    }
+    .tag {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: #e9f3ff;
+      color: var(--accent);
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+    }
+    ul {
+      margin: 8px 0 0 18px;
+    }
+    .ok {
+      color: var(--ok);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Git Incident Response Showcase</h1>
+    <p class="subtitle">Repository cleanup, history forensics, and secure recovery workflows.</p>
+
+    <section class="card">
+      <span class="tag">Security Cleanup</span>
+      <p>Removed leaked secrets from all commits and rebuilt safe defaults.</p>
+      <ul>
+        <li>Purged sensitive <code>.env</code> data from repository history.</li>
+        <li>Added <code>.gitignore</code> protection for local secrets.</li>
+        <li>Published <code>.env.example</code> with placeholder values.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <span class="tag">Time-Travel Debugging</span>
+      <p>Traced config drift to identify when timeout changes were introduced.</p>
+      <ul>
+        <li>Located commit that set timeout to <code>480</code>.</li>
+        <li>Resolved parent commit for deployment context.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <span class="tag">Contact</span>
+      <p class="ok">Email marker included exactly as required:</p>
+      <p><!--email_off-->25f1001183@ds.study.iitm.ac.in<!--/email_off--></p>
+    </section>
+  </main>
+</body>
+</html>
+
