@@ -1,0 +1,30 @@
+name: DevSync Daily Commit
+
+on:
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  daily-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 25f1001183@ds.study.iitm.ac.in daily update
+        run: |
+          mkdir -p .github/devsync
+          echo "run_id=${GITHUB_RUN_ID} time=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> .github/devsync/daily-activity.log
+
+      - name: Commit and push daily update
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/devsync/daily-activity.log
+          git commit -m "chore: daily automated update [skip ci]" || exit 0
+          git push
+
