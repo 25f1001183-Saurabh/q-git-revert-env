@@ -16,9 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 25f1001183@ds.study.iitm.ac.in daily update
-        run: |
-          mkdir -p .github/devsync
-          echo "run_id=${GITHUB_RUN_ID} time=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> .github/devsync/daily-activity.log
+        run: echo "Daily automation step running"
 
       - name: Commit and push daily update
         run: |
@@ -26,6 +24,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout "${GITHUB_REF_NAME}"
           git pull --rebase origin "${GITHUB_REF_NAME}"
+          mkdir -p .github/devsync
+          echo "run_id=${GITHUB_RUN_ID} time=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> .github/devsync/daily-activity.log
           git add .github/devsync/daily-activity.log
           git commit -m "chore: daily automated update [skip ci]" || exit 0
           git push origin "${GITHUB_REF_NAME}"
