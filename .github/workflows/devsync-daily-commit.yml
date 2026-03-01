@@ -24,12 +24,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin daily-updates || true
-          if git show-ref --verify --quiet refs/remotes/origin/daily-updates; then
-            git switch -c daily-updates --track origin/daily-updates
-          else
-            git switch -c daily-updates
-          fi
+          git checkout "${GITHUB_REF_NAME}"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
           git add .github/devsync/daily-activity.log
           git commit -m "chore: daily automated update [skip ci]" || exit 0
-          git push origin HEAD:daily-updates
+          git push origin "${GITHUB_REF_NAME}"
