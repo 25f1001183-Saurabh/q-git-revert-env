@@ -1,0 +1,7 @@
+{
+  "prompt": "Create a single-frame editorial image (not a standard chart) that embodies global sea-level rise as a personal, domestic threat: an empty child bedroom with a doorframe covered in year-by-year flood marks, where marks are small and faint in early decades and become longer, darker, and red-tinted in recent years to imply acceleration. Show seawater physically rising to the latest mark, flooding the room, partially submerging a teddy bear, and placing a child silhouette nearby for scale and emotional weight. No axis labels, no legend, no text, no infographic boxes, no multi-panel layout. Cinematic natural light from one side, muted earth palette with cold blue floodwater, high texture detail, magazine opener composition, 4:5 vertical, single image only.",
+  "model": "Custom Python procedural rendering (Pillow) v1.0",
+  "dataset_name": "Our World in Data \u2014 Global Mean Sea Level (Church & White 2011 + UHSLC average)",
+  "dataset_url": "https://ourworldindata.org/grapher/sea-level.csv",
+  "insight": "Global sea level has risen dramatically since the late 19th century, and the rise is no longer abstract \u2014 it is visibly encroaching on human spaces."
+}
