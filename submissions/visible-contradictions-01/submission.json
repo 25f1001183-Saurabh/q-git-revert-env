@@ -1,0 +1,6 @@
+{
+  "prompt": "Create a physically plausible, uncanny single-frame orchard scene at dusk. Every tree is fitted with rigid metal caliper cages that force fruit to a standardized large size. The fruit appears impressively oversized from outside but is visibly hollow, split, and rotting within. Show foreground hands and instruments obsessing over measurement hardware while neglected, collapsed fruit litters the soil. No text, no numbers, no charts, no equations, no symbols. Painterly realism, earthy muted palette, cinematic depth, paradoxical mood where optimization of a visible metric has destroyed what the metric was meant to represent.",
+  "model": "Custom Python procedural rendering (Pillow) v1.0",
+  "paradox": "Goodhart's Law",
+  "visual_logic": "An orchard optimizes visible fruit size with measuring cages; the fruit grows larger yet hollow and rotten, making success by the metric coincide with failure of the underlying goal."
+}
