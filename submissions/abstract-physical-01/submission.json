@@ -1,0 +1,6 @@
+{
+  "prompt": "Photorealistic locksmith workshop at dusk, single frame, no text. A table holds many ordinary padlocks in a row, all closed. One bizarre, overly intricate brass key with jagged micro-notches fits into only one uniquely irregular lock mounted on a vise, while plain keys are scattered nearby and appear useless for the other locks. Strong side window light, dust in air, worn wood, industrial realism, cinematic composition, shallow depth cues, physically plausible materials, no charts, no equations, no labels, no symbols, no infographic style.",
+  "model": "Custom Python procedural rendering (Pillow) v1.0",
+  "concept": "overfitting",
+  "metaphor": "A hyper-complex key opens one irregular lock while many ordinary locks stay closed, mirroring a model that memorizes training quirks but fails to generalize."
+}
