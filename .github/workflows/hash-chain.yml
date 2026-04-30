@@ -1,0 +1,26 @@
+name: Hash Chain Verify
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compute verify hash 1915644b
+        env:
+          MY_SECRET: ${{ secrets.MY_SECRET }}
+        run: |
+          verify_hash=$(printf "%s" "${MY_SECRET}github-verified" | sha256sum | cut -c1-10)
+          echo "$verify_hash" > verify_hash.txt
+          echo "VERIFY_HASH=$verify_hash" >> "$GITHUB_ENV"
+
+      - name: Upload verify-hash-1915644b artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: verify-hash-1915644b
+          path: verify_hash.txt
